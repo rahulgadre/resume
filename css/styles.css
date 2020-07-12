@@ -2816,8 +2816,8 @@ fieldset:disabled a.btn {
 }
 .btn-outline-warning:hover {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #28a745;
+  border-color: #28a745;
 }
 .btn-outline-warning:focus, .btn-outline-warning.focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
