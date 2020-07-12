@@ -19,7 +19,7 @@
   --orange: #ffa163;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #20c997;
+  --teal: #1e9b75;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
@@ -10100,7 +10100,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #343a40;
+  background-color: #1e9b75;
 }
 
 .dev-icons {
