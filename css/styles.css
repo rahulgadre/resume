@@ -16,8 +16,8 @@
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
-  --orange: #dc3545;
-  --yellow: #dc3545;
+  --orange: #6C63FF;
+  --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
@@ -9831,7 +9831,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: #dc3545 !important;
+  color: #ffc107 !important;
 }
 
 a.text-warning:hover, a.text-warning:focus {
