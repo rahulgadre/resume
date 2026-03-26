@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rahul's Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+<style>
+:root{
+  --bg:#0f172a;--bg2:#1e293b;--surface:#1e293b;--surface2:#334155;
+  --text:#e2e8f0;--text-dim:#94a3b8;--accent:#38bdf8;--accent2:#818cf8;
+  --border:#334155;--card-shadow:0 4px 24px rgba(0,0,0,.3);
+  --nav-bg:#0f172a;--nav-text:#94a3b8;--nav-active:#38bdf8;
+  --badge-bg:rgba(56,189,248,.12);--badge-text:#38bdf8;
+  --trophy:#fbbf24;--section-line:linear-gradient(180deg,#38bdf8,#818cf8);
+}
+.light-theme{
+  --bg:#f8fafc;--bg2:#ffffff;--surface:#ffffff;--surface2:#f1f5f9;
+  --text:#0f172a;--text-dim:#64748b;--accent:#0284c7;--accent2:#6366f1;
+  --border:#e2e8f0;--card-shadow:0 4px 24px rgba(0,0,0,.06);
+  --nav-bg:#0f172a;--nav-text:#94a3b8;--nav-active:#38bdf8;
+  --badge-bg:rgba(2,132,199,.1);--badge-text:#0284c7;
+  --trophy:#d97706;--section-line:linear-gradient(180deg,#0284c7,#6366f1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent2)}
+
+/* Theme Toggle */
+.theme-toggle{position:fixed;top:20px;right:20px;z-index:999;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text-dim);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .2s;box-shadow:var(--card-shadow)}
+.theme-toggle:hover{background:var(--surface2);color:var(--text);transform:scale(1.1)}
+
+/* Sidebar Nav */
+nav{position:fixed;left:0;top:0;bottom:0;width:220px;background:var(--nav-bg);display:flex;flex-direction:column;align-items:center;padding:40px 0 20px;z-index:100;border-right:1px solid rgba(255,255,255,.06)}
+nav .profile-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:16px;transition:transform .3s}
+nav .profile-img:hover{transform:scale(1.05)}
+nav .nav-name{color:#fff;font-weight:700;font-size:16px;margin-bottom:24px}
+nav ul{list-style:none;width:100%}
+nav li a{display:flex;align-items:center;gap:8px;padding:10px 32px;color:var(--nav-text);font-size:13px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
+nav li a i{width:16px;text-align:center;font-size:14px}
+nav li a:hover,nav li a.active{color:var(--nav-active);border-left-color:var(--nav-active);background:rgba(56,189,248,.05)}
+
+/* Main Content */
+main{margin-left:220px;padding:0}
+section{padding:48px 60px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start}
+section:last-child{border-bottom:none}
+.section-inner{width:100%;max-width:900px}
+
+/* Section Headers */
+h2{font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
+h2 i{color:var(--accent);font-size:24px}
+h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px}
+
+/* About */
+.about-name{font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.about-name span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.about-subtitle{font-size:16px;color:var(--text-dim);margin-bottom:24px;font-weight:500}
+.about-bio{font-size:17px;color:var(--text-dim);line-height:1.8;margin-bottom:32px;max-width:700px}
+.social-icons{display:flex;gap:12px}
+.social-icon{width:42px;height:42px;border-radius:50%;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:18px;transition:all .2s}
+.social-icon:hover{background:var(--accent);color:#fff;transform:translateY(-3px)}
+
+/* Experience Cards */
+.exp-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-bottom:20px;position:relative;transition:all .2s;box-shadow:var(--card-shadow)}
+.exp-card:hover{border-color:var(--accent);transform:translateX(4px)}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:12px 0 0 12px;background:var(--section-line)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.exp-title{font-size:20px;font-weight:700}
+.exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
+.exp-date{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.exp-card ul{margin:0;padding-left:20px}
+.exp-card li{color:var(--text-dim);font-size:14px;margin-bottom:6px;line-height:1.7}
+.exp-tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.tech-badge{font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 10px;border-radius:6px;background:var(--badge-bg);color:var(--badge-text);font-weight:500}
+
+/* Education */
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:16px;box-shadow:var(--card-shadow)}
+.edu-school{font-size:20px;font-weight:700}
+.edu-degree{font-size:14px;color:var(--accent);font-weight:600;margin:4px 0}
+.edu-gpa{font-size:13px;color:var(--text-dim)}
+
+/* Skills */
+.skill-icons{display:flex;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.skill-icons i{font-size:36px;color:var(--text-dim);transition:color .2s}
+.skill-icons i:hover{color:var(--accent)}
+.skill-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.skill-list li{font-size:14px;color:var(--text-dim);display:flex;align-items:center;gap:10px}
+.skill-list li::before{content:'✓';color:var(--accent);font-weight:700;font-size:14px}
+
+/* Interests */
+.interests p{font-size:16px;color:var(--text-dim);line-height:1.8;margin-bottom:12px}
+
+/* Awards */
+.award-list{list-style:none}
+.award-list li{font-size:14px;color:var(--text-dim);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px}
+.award-list li:last-child{border-bottom:none}
+.award-list i{color:var(--trophy);margin-top:3px;flex-shrink:0}
+
+/* Responsive */
+@media(max-width:768px){
+  nav{position:relative;width:100%;flex-direction:row;flex-wrap:wrap;justify-content:center;padding:20px;border-right:none;border-bottom:1px solid var(--border)}
+  nav .profile-img{width:80px;height:80px}
+  nav ul{display:flex;flex-wrap:wrap;justify-content:center}
+  nav li a{padding:6px 14px;border-left:none;border-bottom:2px solid transparent}
+  nav li a:hover,nav li a.active{border-left:none;border-bottom-color:var(--nav-active)}
+  main{margin-left:0}
+  section{padding:24px 20px;min-height:auto;break-inside:avoid}
+  .about-name{font-size:32px}
+  .theme-toggle{top:10px;right:10px;width:36px;height:36px;font-size:16px}
+}
+@media print{
+  nav,.theme-toggle{display:none}
+  main{margin-left:0}
+  section{padding:20px 0;min-height:auto;break-inside:avoid}
+  .exp-card{box-shadow:none;border:1px solid #ddd}
+}
+</style>
+</head>
+<body id="page-top">
+
+<button class="theme-toggle" onclick="document.documentElement.classList.toggle('light-theme');localStorage.setItem('theme',document.documentElement.classList.contains('light-theme')?'light':'dark');this.textContent=document.documentElement.classList.contains('light-theme')?'🌙':'☀️'" aria-label="Toggle theme">☀️</button>
+<script>if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light-theme');document.querySelector('.theme-toggle').textContent='🌙'}</script>
+
+<nav>
+  <img class="profile-img" src="assets/img/my_new_pic.jpeg" alt="Rahul Gadre"/>
+  <div class="nav-name">Rahul Gadre</div>
+  <ul>
+    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+    <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+    <li><a href="#skills"><i class="fas fa-book-open"></i> Skills</a></li>
+    <li><a href="#interests"><i class="far fa-smile"></i> Interests</a></li>
+    <li><a href="#awards"><i class="fas fa-award"></i> Awards</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="section-inner">
+  <h1 class="about-name">Rahul <span>Gadre</span></h1>
+  <div class="about-subtitle">📍 Denver, CO, USA · <a href="mailto:rahul@rahulgadre.com">rahul@rahulgadre.com</a></div>
+  <p class="about-bio">
+    Results-driven cloud engineer and Technical Account Manager with over a decade of experience in the IT industry. Passionate about learning new technologies to improve people, processes, and infrastructure. Actively working with cloud platforms (AWS, Azure), containers (Docker, Kubernetes), and Infrastructure as Code (Terraform, Ansible).
+  </p>
+  <div class="social-icons">
+    <a class="social-icon" href="https://www.linkedin.com/in/rahulgadre/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a class="social-icon" href="https://github.com/rahulgadre" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a class="social-icon" href="https://twitter.com/rggadre" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a class="social-icon" href="https://dev.to/rahulgadre" aria-label="Dev.to"><i class="fab fa-dev"></i></a>
+    <a class="social-icon" href="https://rahulgadre.com" aria-label="Website"><i class="fas fa-home"></i></a>
+  </div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="section-inner">
+  <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Technical Account Manager</div>
+        <div class="exp-company">Amazon Web Services · Denver, Colorado</div>
+      </div>
+      <span class="exp-date">Dec 2024 – Present</span>
+    </div>
+    <ul>
+      <li>Serve as the primary technical liaison for enterprise customers, building and maintaining strong relationships to ensure satisfaction and retention.</li>
+      <li>Advocate for customers and guide them through their cloud journey with a focus on cost optimization and operational excellence.</li>
+      <li>Provide proactive technical guidance and strategic consulting, helping customers optimize their use of AWS services and achieve business objectives.</li>
+      <li>Conduct regular cadence calls with key stakeholders to review AWS service usage and coordinate with internal teams to resolve complex technical issues.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">Enterprise Support</span><span class="tech-badge">Cost Optimization</span><span class="tech-badge">Well-Architected Framework</span><span class="tech-badge">Trusted Advisor</span><span class="tech-badge">EC2</span><span class="tech-badge">S3</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">IAM</span><span class="tech-badge">VPC</span><span class="tech-badge">Bedrock</span><span class="tech-badge">Control Tower</span><span class="tech-badge">CloudTrail</span><span class="tech-badge">AWS Config</span><span class="tech-badge">AWS Organizations</span><span class="tech-badge">GuardDuty</span><span class="tech-badge">Security Hub</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Cloud Support Engineer II</div>
+        <div class="exp-company">Amazon Web Services · Denver, Colorado</div>
+      </div>
+      <span class="exp-date">Dec 2020 – Dec 2024</span>
+    </div>
+    <ul>
+      <li>Supported Enterprise and Business-tier customers in troubleshooting and resolving complex technical challenges across a wide range of AWS services.</li>
+      <li>Assisted customers through migrations, modernizations, streaming workloads, and go-live events.</li>
+      <li>Troubleshot OS, networking, and system-level issues, applying creative problem-solving techniques to deliver tailored solutions.</li>
+      <li>Collaborated with service teams to identify bugs and drive service improvements.</li>
+      <li>Drove customer communication during critical events and ensured timely resolution.</li>
+      <li>Worked directly with AWS architects and TAMs to reproduce issues and identify solutions for customer use cases.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">EC2</span><span class="tech-badge">VPC</span><span class="tech-badge">EBS</span><span class="tech-badge">EFS</span><span class="tech-badge">ELB</span><span class="tech-badge">Auto Scaling</span><span class="tech-badge">ElastiCache</span><span class="tech-badge">Route 53</span><span class="tech-badge">IAM</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">CloudTrail</span><span class="tech-badge">Systems Manager</span><span class="tech-badge">Trusted Advisor</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Senior Systems Engineer</div>
+        <div class="exp-company">Avaya · Thornton, Colorado</div>
+      </div>
+      <span class="exp-date">Jun 2018 – Dec 2020</span>
+    </div>
+    <ul>
+      <li>Designed cloud-based solutions based on customer requirements using VMware and AWS.</li>
+      <li>Tested new cloud and container features for upcoming product releases.</li>
+      <li>Deployed and managed on-premises and cloud resources using Infrastructure as Code, reducing deployment time from hours to minutes.</li>
+      <li>Developed automation and backup solutions for infrastructure and new products.</li>
+      <li>Created build instructions, knowledge base articles, and product documentation.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">AWS</span><span class="tech-badge">VMware</span><span class="tech-badge">Terraform</span><span class="tech-badge">Docker</span><span class="tech-badge">Ansible</span><span class="tech-badge">Nimble Storage</span><span class="tech-badge">EMC Storage</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Data Center Operations Engineer</div>
+        <div class="exp-company">Avaya · Highlands Ranch, Colorado</div>
+      </div>
+      <span class="exp-date">Jul 2016 – May 2018</span>
+    </div>
+    <ul>
+      <li>Designed and proposed cost-effective solutions using core AWS services.</li>
+      <li>Performed DNS updates, patching, and upgrades using Ansible automation.</li>
+      <li>Troubleshot system software, hardware, and connectivity issues.</li>
+      <li>Configured and deployed data center automation using Ansible and Netmiko.</li>
+      <li>Maintained and configured virtual environments including vCenter and OpenStack.</li>
+      <li>Contributed to the design, deployment, and migration of data centers on virtualized platforms.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">AWS</span><span class="tech-badge">VMware vCenter</span><span class="tech-badge">OpenStack</span><span class="tech-badge">Ansible</span><span class="tech-badge">Veeam</span><span class="tech-badge">DNS</span><span class="tech-badge">IPAM</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Network Engineering Co-Op</div>
+        <div class="exp-company">Finger Lakes Technologies Group · Victor, New York</div>
+      </div>
+      <span class="exp-date">Feb 2016 – May 2016</span>
+    </div>
+    <ul>
+      <li>Managed network device configurations for multiple services including MPLS, BGP, and Metro Ethernet.</li>
+      <li>Monitored and maintained Layer 2 and Layer 3 transport circuits.</li>
+      <li>Troubleshot customer issues and resolved cases in a timely manner.</li>
+      <li>Managed IP addressing and equipment assignments for new customers.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">Cisco Routers</span><span class="tech-badge">MPLS</span><span class="tech-badge">BGP</span><span class="tech-badge">SolarWinds</span><span class="tech-badge">Cisco ASA</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">Network Engineering Intern</div>
+        <div class="exp-company">NRG Energy · Canonsburg, Pennsylvania</div>
+      </div>
+      <span class="exp-date">Jun 2015 – Aug 2015</span>
+    </div>
+    <ul>
+      <li>Resolved network access issues with switches and routers.</li>
+      <li>Managed networks using monitoring tools such as WhatsUp Gold, Smokeping, and MRTG.</li>
+      <li>Configured and deployed Meraki APs and Netbotz devices.</li>
+      <li>Performed software and hardware upgrades across company sites.</li>
+      <li>Configured and maintained firewalls using Cisco ASDM.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">Cisco</span><span class="tech-badge">Meraki</span><span class="tech-badge">Cisco ASA</span><span class="tech-badge">WhatsUp Gold</span><span class="tech-badge">Smokeping</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-title">System Administrator</div>
+        <div class="exp-company">HSBC Software India Pvt. Ltd. · Pune, India</div>
+      </div>
+      <span class="exp-date">Jun 2011 – Jul 2013</span>
+    </div>
+    <ul>
+      <li>Worked on a security project to monitor electronic data across the organization.</li>
+      <li>Handled client interaction, business analysis, and requirements gathering.</li>
+      <li>Provided global client support and maintained comprehensive documentation.</li>
+      <li>Managed Active Directory accounts and updated policies based on business requirements.</li>
+      <li>Developed weekly reports to monitor electronic data traffic performance.</li>
+    </ul>
+    <div class="exp-tech">
+      <span class="tech-badge">Windows Server</span><span class="tech-badge">PowerShell</span><span class="tech-badge">Active Directory</span><span class="tech-badge">VMware</span><span class="tech-badge">CA DLP</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="section-inner">
+  <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+  <div class="edu-card">
+    <div class="exp-header">
+      <div>
+        <div class="edu-school">Rochester Institute of Technology</div>
+        <div class="edu-degree">Master of Science in Networking and System Administration</div>
+        <div class="edu-gpa">GPA: 4.0 / 4.0</div>
+      </div>
+      <span class="exp-date">Aug 2013 – May 2016</span>
+    </div>
+  </div>
+
+  <div class="edu-card">
+    <div class="exp-header">
+      <div>
+        <div class="edu-school">University of Mumbai</div>
+        <div class="edu-degree">Bachelor of Engineering in Electronics Engineering</div>
+        <div class="edu-gpa">GPA: 3.6 / 4.0</div>
+      </div>
+      <span class="exp-date">Aug 2008 – Jun 2011</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="section-inner">
+  <h2><i class="fas fa-book-open"></i> Skills</h2>
+
+  <div class="skill-icons">
+    <i class="fab fa-aws"></i>
+    <i class="fab fa-linux"></i>
+    <i class="fab fa-docker"></i>
+    <i class="fab fa-microsoft"></i>
+    <i class="fab fa-redhat"></i>
+    <i class="fas fa-network-wired"></i>
+  </div>
+
+  <ul class="skill-list">
+    <li>Cloud: AWS, VMware, Azure</li>
+    <li>Operating Systems: Windows, macOS, RHEL, CentOS, Ubuntu</li>
+    <li>DevOps: Ansible, GitHub, Docker, Terraform, Kubernetes</li>
+    <li>Networking: VPC, Route 53, ELB, MPLS, BGP, DNS</li>
+    <li>Monitoring: CloudWatch, CloudTrail, SolarWinds</li>
+    <li>Security: IAM, GuardDuty, Security Hub, Firewalls</li>
+  </ul>
+
+</div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests">
+<div class="section-inner">
+  <h2><i class="far fa-smile"></i> Interests</h2>
+  <div class="interests">
+    <p>I am a multi-cloud engineer passionate about designing and deploying infrastructure using AWS, Azure, Ansible, Docker, VMware, and Terraform.</p>
+    <p>In my free time, I enjoy hiking and taking long walks in the mountains. I also like playing sports, including soccer, badminton, and cricket.</p>
+  </div>
+</div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+<div class="section-inner">
+  <h2><i class="fas fa-award"></i> Awards, Honors &amp; Certifications</h2>
+  <ul class="award-list">
+    <li><i class="fas fa-trophy"></i>AWS Certified Security — Specialty</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified AI Practitioner</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified DevOps Engineer — Professional</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified Solutions Architect — Professional</li>
+    <li><i class="fas fa-trophy"></i>HashiCorp Certified Terraform Associate</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified Developer — Associate</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified SysOps Administrator — Associate</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified Solutions Architect — Associate</li>
+    <li><i class="fas fa-trophy"></i>AWS Certified Cloud Practitioner</li>
+    <li><i class="fas fa-trophy"></i>Microsoft Certified Azure Fundamentals</li>
+    <li><i class="fas fa-trophy"></i>Elastic Block Store (EBS) Subject Matter Expert</li>
+    <li><i class="fas fa-trophy"></i>Cisco Certified Network Associate (Retired)</li>
+    <li><i class="fas fa-trophy"></i>One of six recipients out of 140 graduate students to earn a full graduate research and teaching assistantship from RIT</li>
+    <li><i class="fas fa-trophy"></i>Maintained a 4.0 GPA throughout the master's program</li>
+  </ul>
+</div>
+</section>
+
+</main>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+// Active nav highlight on scroll
+const sections=document.querySelectorAll('section');
+const navLinks=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)current=s.id});
+  navLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>
