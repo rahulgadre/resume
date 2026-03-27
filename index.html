@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rahul's Resume</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
@@ -25,7 +25,7 @@
   --trophy:#d97706;--section-line:linear-gradient(180deg,#0284c7,#6366f1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+body{font-family:'Lora',Georgia,serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent2)}
 
@@ -42,7 +42,7 @@ nav .profile-img:hover{transform:scale(1.05)}
 .scroll-top:hover{background:var(--surface2);color:var(--text);transform:scale(1.1)}
 .scroll-top.visible{display:flex}
 nav ul{list-style:none;width:100%}
-nav li a{display:flex;align-items:center;gap:8px;padding:10px 32px;color:var(--nav-text);font-size:13px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
+nav li a{display:flex;align-items:center;gap:8px;padding:10px 32px;color:var(--nav-text);font-family:'Raleway',sans-serif;font-size:13px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
 nav li a i{width:16px;text-align:center;font-size:14px}
 nav li a:hover,nav li a.active{color:var(--nav-active);border-left-color:var(--nav-active);background:rgba(56,189,248,.05)}
 
@@ -53,12 +53,12 @@ section:last-child{border-bottom:none}
 .section-inner{width:100%;max-width:1000px}
 
 /* Section Headers */
-h2{font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
+h2{font-family:'Raleway',sans-serif;font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
 h2 i{color:var(--accent);font-size:24px}
 h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px}
 
 /* About */
-.about-name{font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.about-name{font-family:'Raleway',sans-serif;font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
 .about-name span{color:var(--text)}
 .about-subtitle{font-size:16px;color:var(--text-dim);margin-bottom:24px;font-weight:500}
 .about-bio{font-size:17px;color:var(--text-dim);line-height:1.8;margin-bottom:32px;max-width:100%}
@@ -71,7 +71,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .exp-card:hover{border-color:var(--accent);transform:translateX(4px)}
 .exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:12px 0 0 12px;background:var(--section-line)}
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.exp-title{font-size:20px;font-weight:700}
+.exp-title{font-family:'Raleway',sans-serif;font-size:20px;font-weight:700}
 .exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
 .exp-date{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
 .exp-card ul{margin:0;padding-left:20px}
@@ -81,7 +81,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 
 /* Education */
 .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:16px;box-shadow:var(--card-shadow)}
-.edu-school{font-size:20px;font-weight:700}
+.edu-school{font-family:'Raleway',sans-serif;font-size:20px;font-weight:700}
 .edu-degree{font-size:14px;color:var(--accent);font-weight:600;margin:4px 0}
 .edu-gpa{font-size:13px;color:var(--text-dim)}
 
@@ -135,7 +135,9 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
     <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
     <li><a href="#skills"><i class="fas fa-book-open"></i> Skills</a></li>
     <li><a href="#interests"><i class="far fa-smile"></i> Interests</a></li>
-    <li><a href="#awards"><i class="fas fa-award"></i> Awards</a></li>
+    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+    <li><a href="#awards"><i class="fas fa-certificate"></i> Certifications</a></li>
+    <li><a href="#honors"><i class="fas fa-medal"></i> Honors</a></li>
   </ul>
 </nav>
 
@@ -145,9 +147,9 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 <section id="about">
 <div class="section-inner">
   <h1 class="about-name">Rahul <span>Gadre</span></h1>
-  <div class="about-subtitle">📍 Denver, CO, USA · <a href="mailto:rahul@rahulgadre.com">rahul@rahulgadre.com</a></div>
+  <div class="about-subtitle">📍 Littleton, CO, USA · <a href="mailto:rahul@rahulgadre.com">rahul@rahulgadre.com</a></div>
   <p class="about-bio">
-    Results-driven cloud engineer and Technical Account Manager with over a decade of experience in the IT industry. Passionate about learning new technologies to improve people, processes, and infrastructure. Actively working with cloud platforms (AWS, Azure), containers (Docker, Kubernetes), and Infrastructure as Code (Terraform, Ansible).
+    Results-driven Cloud Engineer with 10+ years of experience in enterprise IT infrastructure and cloud technologies. Proven expertise in designing and optimizing AWS cloud solutions, virtualization platforms, and configuration management. Combines strong technical acumen with continuous learning to deliver scalable, cost-effective solutions that drive operational excellence and help customers achieve their business goals.
   </p>
   <div class="social-icons">
     <a class="social-icon" href="https://www.linkedin.com/in/rahulgadre/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -173,13 +175,14 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
       <span class="exp-date">Dec 2024 – Present</span>
     </div>
     <ul>
-      <li>Serve as the primary technical liaison for enterprise customers, building and maintaining strong relationships to ensure satisfaction and retention.</li>
-      <li>Advocate for customers and guide them through their cloud journey with a focus on cost optimization and operational excellence.</li>
-      <li>Provide proactive technical guidance and strategic consulting, helping customers optimize their use of AWS services and achieve business objectives.</li>
-      <li>Conduct regular cadence calls with key stakeholders to review AWS service usage and coordinate with internal teams to resolve complex technical issues.</li>
+      <li>Serving as the primary technical liaison for enterprise customers, focusing on cost optimization, operational excellence, and strategic consulting.</li>
+      <li>Identified $30,000 in new annual savings for a customer, bringing total realized and potential savings to over $87,000 per year.</li>
+      <li>Helped another customer save over $108K annually by guiding them through an RDS version upgrade.</li>
+      <li>Providing proactive technical guidance and strategic consulting to customers, helping them optimize AWS services and achieve business objectives.</li>
+      <li>Leading regular cadences with key stakeholders to review AWS usage and coordinating with internal resources to resolve technical issues.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">Enterprise Support</span><span class="tech-badge">Cost Optimization</span><span class="tech-badge">Well-Architected Framework</span><span class="tech-badge">Trusted Advisor</span><span class="tech-badge">EC2</span><span class="tech-badge">S3</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">IAM</span><span class="tech-badge">VPC</span><span class="tech-badge">Bedrock</span><span class="tech-badge">Control Tower</span><span class="tech-badge">CloudTrail</span><span class="tech-badge">AWS Config</span><span class="tech-badge">AWS Organizations</span><span class="tech-badge">GuardDuty</span><span class="tech-badge">Security Hub</span>
+      <span class="tech-badge">Strategic Planning</span><span class="tech-badge">Business Development</span><span class="tech-badge">Trusted Advisor</span><span class="tech-badge">Cost Optimization</span><span class="tech-badge">Well-Architected Framework</span><span class="tech-badge">Cloud Governance</span><span class="tech-badge">Multi-Account Strategy</span>
     </div>
   </div>
 
@@ -192,56 +195,52 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
       <span class="exp-date">Dec 2020 – Dec 2024</span>
     </div>
     <ul>
-      <li>Supported Enterprise and Business-tier customers in troubleshooting and resolving complex technical challenges across a wide range of AWS services.</li>
-      <li>Assisted customers through migrations, modernizations, streaming workloads, and go-live events.</li>
-      <li>Troubleshot OS, networking, and system-level issues, applying creative problem-solving techniques to deliver tailored solutions.</li>
-      <li>Collaborated with service teams to identify bugs and drive service improvements.</li>
-      <li>Drove customer communication during critical events and ensured timely resolution.</li>
-      <li>Worked directly with AWS architects and TAMs to reproduce issues and identify solutions for customer use cases.</li>
+      <li>Provided technical support to Enterprise and Business customers, troubleshooting OS, networking, and system-level issues using advanced techniques and customized solutions.</li>
+      <li>Resolved over 1,600 support cases and achieved more than 300 five-star customer ratings.</li>
+      <li>Collaborated with service teams to identify bugs, implement improvements, and worked with AWS architects and TAMs to reproduce and resolve complex customer use cases.</li>
+      <li>Supported optimal cloud solutions, led critical event communications, and helped customers implement performance optimization and industry best practices.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">EC2</span><span class="tech-badge">VPC</span><span class="tech-badge">EBS</span><span class="tech-badge">EFS</span><span class="tech-badge">ELB</span><span class="tech-badge">Auto Scaling</span><span class="tech-badge">ElastiCache</span><span class="tech-badge">Route 53</span><span class="tech-badge">IAM</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">CloudTrail</span><span class="tech-badge">Systems Manager</span><span class="tech-badge">Trusted Advisor</span>
+      <span class="tech-badge">EC2</span><span class="tech-badge">Systems Manager</span><span class="tech-badge">EBS</span><span class="tech-badge">CloudWatch</span><span class="tech-badge">CloudTrail</span><span class="tech-badge">VPC</span><span class="tech-badge">Auto Scaling</span><span class="tech-badge">ELB</span>
     </div>
   </div>
 
   <div class="exp-card">
     <div class="exp-header">
       <div>
-        <div class="exp-title">Senior Systems Engineer</div>
+        <div class="exp-title">Software Engineer III</div>
         <div class="exp-company">Avaya · Thornton, Colorado</div>
       </div>
       <span class="exp-date">Jun 2018 – Dec 2020</span>
     </div>
     <ul>
-      <li>Designed cloud-based solutions based on customer requirements using VMware and AWS.</li>
-      <li>Tested new cloud and container features for upcoming product releases.</li>
-      <li>Deployed and managed on-premises and cloud resources using Infrastructure as Code, reducing deployment time from hours to minutes.</li>
-      <li>Developed automation and backup solutions for infrastructure and new products.</li>
-      <li>Created build instructions, knowledge base articles, and product documentation.</li>
+      <li>Designed and deployed cloud solutions using VMware and AWS based on customer requirements, including migration paths for legacy systems.</li>
+      <li>Led solution design, configuration, deployment, and verification while managing infrastructure using IaC, reducing deployment time from hours to minutes.</li>
+      <li>Created comprehensive documentation including KB articles and product guides and developed automation and backup solutions for infrastructure and new products.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">AWS</span><span class="tech-badge">VMware</span><span class="tech-badge">Terraform</span><span class="tech-badge">Docker</span><span class="tech-badge">Ansible</span><span class="tech-badge">Nimble Storage</span><span class="tech-badge">EMC Storage</span>
+      <span class="tech-badge">AWS</span><span class="tech-badge">VMware</span><span class="tech-badge">Datacenter Automation</span><span class="tech-badge">Terraform</span><span class="tech-badge">Extreme Switches</span><span class="tech-badge">Nimble/EMC Storage</span><span class="tech-badge">Docker</span><span class="tech-badge">Ansible</span>
     </div>
   </div>
 
   <div class="exp-card">
     <div class="exp-header">
       <div>
-        <div class="exp-title">Data Center Operations Engineer</div>
+        <div class="exp-title">Senior Technical Associate</div>
         <div class="exp-company">Avaya · Highlands Ranch, Colorado</div>
       </div>
-      <span class="exp-date">Jul 2016 – May 2018</span>
+      <span class="exp-date">Jul 2016 – Jun 2018</span>
     </div>
     <ul>
       <li>Designed and proposed cost-effective solutions using core AWS services.</li>
-      <li>Performed DNS updates, patching, and upgrades using Ansible automation.</li>
+      <li>Successfully performed DNS updates and patching using automation with Ansible.</li>
       <li>Troubleshot system software, hardware, and connectivity issues.</li>
-      <li>Configured and deployed data center automation using Ansible and Netmiko.</li>
-      <li>Maintained and configured virtual environments including vCenter and OpenStack.</li>
-      <li>Contributed to the design, deployment, and migration of data centers on virtualized platforms.</li>
+      <li>Configured and deployed network automation using Netmiko.</li>
+      <li>Performed backups and restores of VMs using Veeam. Maintained and configured virtual environments including vCenter and AWS.</li>
+      <li>Contributed to design, deployment, and migration of data centers on top of virtualized platforms.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">AWS</span><span class="tech-badge">VMware vCenter</span><span class="tech-badge">OpenStack</span><span class="tech-badge">Ansible</span><span class="tech-badge">Veeam</span><span class="tech-badge">DNS</span><span class="tech-badge">IPAM</span>
+      <span class="tech-badge">AWS</span><span class="tech-badge">VMware vCenter</span><span class="tech-badge">Red Hat OpenStack</span><span class="tech-badge">Ansible</span><span class="tech-badge">Firewalls</span><span class="tech-badge">DNS</span><span class="tech-badge">IPAM</span><span class="tech-badge">Veeam</span><span class="tech-badge">Extreme Switches</span><span class="tech-badge">Avaya Switches</span>
     </div>
   </div>
 
@@ -258,9 +257,10 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
       <li>Monitored and maintained Layer 2 and Layer 3 transport circuits.</li>
       <li>Troubleshot customer issues and resolved cases in a timely manner.</li>
       <li>Managed IP addressing and equipment assignments for new customers.</li>
+      <li>Handled the overall lifecycle of all customer and equipment orders.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">Cisco Routers</span><span class="tech-badge">MPLS</span><span class="tech-badge">BGP</span><span class="tech-badge">SolarWinds</span><span class="tech-badge">Cisco ASA</span>
+      <span class="tech-badge">Calix</span><span class="tech-badge">Adtran</span><span class="tech-badge">Cisco Routers</span><span class="tech-badge">SolarWinds</span><span class="tech-badge">Cisco VIRL</span><span class="tech-badge">IP Addressing</span><span class="tech-badge">Cisco ASA</span>
     </div>
   </div>
 
@@ -273,34 +273,31 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
       <span class="exp-date">Jun 2015 – Aug 2015</span>
     </div>
     <ul>
-      <li>Resolved network access issues with switches and routers.</li>
-      <li>Managed networks using monitoring tools such as WhatsUp Gold, Smokeping, and MRTG.</li>
-      <li>Configured and deployed Meraki APs and Netbotz devices.</li>
-      <li>Performed software and hardware upgrades across company sites.</li>
-      <li>Configured and maintained firewalls using Cisco ASDM.</li>
+      <li>Resolved network access issues with switches and routers, managing networks using monitoring tools including WhatsUp Gold, Smokeping, and MRTG.</li>
+      <li>Configured and deployed Meraki APs, Netbotz devices, and maintained firewalls using Cisco ASDM.</li>
+      <li>Performed software and hardware upgrades and conducted on-site visits to resolve network issues.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">Cisco</span><span class="tech-badge">Meraki</span><span class="tech-badge">Cisco ASA</span><span class="tech-badge">WhatsUp Gold</span><span class="tech-badge">Smokeping</span>
+      <span class="tech-badge">Cisco Routers</span><span class="tech-badge">Switches</span><span class="tech-badge">Firewalls</span><span class="tech-badge">WhatsUp Gold</span><span class="tech-badge">Smokeping</span><span class="tech-badge">MRTG</span><span class="tech-badge">Meraki APs</span><span class="tech-badge">Netbotz</span><span class="tech-badge">IPAM</span>
     </div>
   </div>
 
   <div class="exp-card">
     <div class="exp-header">
       <div>
-        <div class="exp-title">System Administrator</div>
+        <div class="exp-title">Software Engineer</div>
         <div class="exp-company">HSBC Software India Pvt. Ltd. · Pune, India</div>
       </div>
       <span class="exp-date">Jun 2011 – Jul 2013</span>
     </div>
     <ul>
-      <li>Worked on a security project to monitor electronic data across the organization.</li>
-      <li>Handled client interaction, business analysis, and requirements gathering.</li>
-      <li>Provided global client support and maintained comprehensive documentation.</li>
-      <li>Managed Active Directory accounts and updated policies based on business requirements.</li>
-      <li>Developed weekly reports to monitor electronic data traffic performance.</li>
+      <li>Worked on a security project to monitor electronic data. Involved in client interaction, business analysis, and requirement gathering.</li>
+      <li>Provided client support and documentation for clients around the world.</li>
+      <li>Maintained Active Directory accounts and changed policies as per business requirements.</li>
+      <li>Developed weekly reports to gauge and monitor the performance of electronic data traffic.</li>
     </ul>
     <div class="exp-tech">
-      <span class="tech-badge">Windows Server</span><span class="tech-badge">PowerShell</span><span class="tech-badge">Active Directory</span><span class="tech-badge">VMware</span><span class="tech-badge">CA DLP</span>
+      <span class="tech-badge">Windows Server 2012</span><span class="tech-badge">PowerShell</span><span class="tech-badge">Batch Scripting</span><span class="tech-badge">Active Directory</span><span class="tech-badge">MS-Excel</span><span class="tech-badge">VMware</span><span class="tech-badge">CA DLP</span>
     </div>
   </div>
 
@@ -374,10 +371,39 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 </div>
 </section>
 
-<!-- AWARDS -->
+<!-- PROJECTS -->
+<section id="projects">
+<div class="section-inner">
+  <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+
+  <div class="exp-card">
+    <div class="exp-title" style="margin-bottom:12px">GA Launch – Generative AI Interface Testing</div>
+    <ul>
+      <li>Enhanced product reliability for GA launch by discovering and documenting 10 critical defects (P0/P1 severity), by systematically testing pre-release AWS generative AI interface solution.</li>
+    </ul>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-title" style="margin-bottom:12px">AI Model Training – Support Case Labeling</div>
+    <ul>
+      <li>Strengthened AI model training and knowledge base accuracy by reviewing and labeling 300+ support cases across multiple AWS projects, providing high-quality datasets for customer support automation.</li>
+    </ul>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-title" style="margin-bottom:12px">Technical Documentation Audit</div>
+    <ul>
+      <li>Improved customer experience and documentation accuracy by collaborating cross-functionally with AWS service teams and product managers to audit, update, and republish technical articles.</li>
+    </ul>
+  </div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
 <section id="awards">
 <div class="section-inner">
-  <h2><i class="fas fa-award"></i> Awards, Honors &amp; Certifications</h2>
+  <h2><i class="fas fa-certificate"></i> Certifications</h2>
   <ul class="award-list">
     <li><i class="fas fa-trophy"></i>AWS Certified Security — Specialty</li>
     <li><i class="fas fa-trophy"></i>AWS Certified AI Practitioner</li>
@@ -391,8 +417,19 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
     <li><i class="fas fa-trophy"></i>Microsoft Certified Azure Fundamentals</li>
     <li><i class="fas fa-trophy"></i>Elastic Block Store (EBS) Subject Matter Expert</li>
     <li><i class="fas fa-trophy"></i>Cisco Certified Network Associate (Retired)</li>
-    <li><i class="fas fa-trophy"></i>One of six recipients out of 140 graduate students to earn a full graduate research and teaching assistantship from RIT</li>
-    <li><i class="fas fa-trophy"></i>Maintained a 4.0 GPA throughout the master's program</li>
+  </ul>
+</div>
+</section>
+
+<!-- HONORS -->
+<section id="honors">
+<div class="section-inner">
+  <h2><i class="fas fa-medal"></i> Honors</h2>
+  <ul class="award-list">
+    <li><i class="fas fa-star"></i>One of six recipients out of 140 graduate students to earn a full graduate research and teaching assistantship from RIT</li>
+    <li><i class="fas fa-star"></i>Maintained a 4.0 GPA throughout the master's program</li>
+    <li><i class="fas fa-star"></i>Selected among top 6 of 2,500 engineers to form elite AWS Countdown Premium team for mission-critical customer support</li>
+    <li><i class="fas fa-star"></i>Led AWS Control Tower immersion day workshops for 55+ customers across multiple industries, achieving perfect satisfaction scores and driving production interest</li>
   </ul>
 </div>
 </section>
