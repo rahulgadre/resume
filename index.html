@@ -5,26 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rahul's Resume</title>
 <link rel="icon" href="assets/img/rg-initials.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
-  --bg:#1d1e20;--bg2:#2e2e33;--surface:#2e2e33;--surface2:#414244;
-  --text:#dadadb;--text-dim:#9b9c9d;--accent:#60a5fa;--accent2:#3b82f6;
-  --border:#333333;--card-shadow:0 4px 24px rgba(0,0,0,.3);
-  --nav-bg:#1d1e20;--nav-text:#9b9c9d;--nav-active:#60a5fa;
-  --badge-bg:rgba(96,165,250,.12);--badge-text:#60a5fa;
-  --trophy:#facc15;--section-line:linear-gradient(180deg,#60a5fa,#3b82f6);
+  --bg:#1c1b22;--bg2:#26252e;--surface:#26252e;--surface2:#333240;
+  --text:#e8e6e3;--text-dim:#a09b94;--accent:#e8a838;--accent2:#d4912a;
+  --border:#333240;--card-shadow:0 4px 24px rgba(0,0,0,.3);
+  --nav-bg:#1c1b22;--nav-text:#8a857e;--nav-active:#e8a838;
+  --badge-bg:rgba(232,168,56,.1);--badge-text:#e8a838;
+  --trophy:#e8a838;--section-line:linear-gradient(180deg,#e8a838,#c77d1a);
+  --font-heading:'Fraunces',serif;
+  --font-body:'Albert Sans',sans-serif;
 }
 .light-theme{
-  --bg:#f5f5f5;--bg2:#ffffff;--surface:#ffffff;--surface2:#ebebeb;
-  --text:#111111;--text-dim:#555555;--accent:#2563eb;--accent2:#1d4ed8;
-  --border:#e0e0e0;--card-shadow:0 4px 24px rgba(0,0,0,.06);
-  --nav-bg:#111111;--nav-text:#999999;--nav-active:#60a5fa;
-  --badge-bg:rgba(37,99,235,.08);--badge-text:#2563eb;
-  --trophy:#ca8a04;--section-line:linear-gradient(180deg,#2563eb,#1d4ed8);
+  --bg:#faf8f5;--bg2:#ffffff;--surface:#ffffff;--surface2:#f0ece6;
+  --text:#1a1a1a;--text-dim:#5c5550;--accent:#b87a1a;--accent2:#9a6515;
+  --border:#e8e2da;--card-shadow:0 4px 24px rgba(0,0,0,.05);
+  --nav-bg:#1a1a1a;--nav-text:#8a857e;--nav-active:#e8a838;
+  --badge-bg:rgba(184,122,26,.08);--badge-text:#9a6515;
+  --trophy:#b87a1a;--section-line:linear-gradient(180deg,#b87a1a,#9a6515);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent2)}
 
@@ -36,12 +41,11 @@ a:hover{color:var(--accent2)}
 nav{position:fixed;left:0;top:0;bottom:0;width:220px;background:var(--nav-bg);display:flex;flex-direction:column;align-items:center;padding:40px 0 20px;z-index:100;border-right:1px solid rgba(255,255,255,.06)}
 nav .profile-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:16px;transition:transform .3s}
 nav .profile-img:hover{transform:scale(1.05)}
-/* Scroll to Top */
 .scroll-top{position:fixed;bottom:24px;right:24px;z-index:999;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text-dim);cursor:pointer;font-size:20px;display:none;align-items:center;justify-content:center;transition:all .2s;box-shadow:var(--card-shadow)}
 .scroll-top:hover{background:var(--surface2);color:var(--text);transform:scale(1.1)}
 .scroll-top.visible{display:flex}
 nav ul{list-style:none;width:100%}
-nav li a{display:flex;align-items:center;gap:8px;padding:10px 32px;color:var(--nav-text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
+nav li a{display:flex;align-items:center;gap:8px;padding:10px 32px;color:var(--nav-text);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
 nav li a i{width:16px;text-align:center;font-size:14px}
 nav li a:hover,nav li a.active{color:var(--nav-active);border-left-color:var(--nav-active);background:rgba(96,165,250,.08)}
 
@@ -52,12 +56,12 @@ section:last-child{border-bottom:none}
 .section-inner{width:100%;max-width:1000px}
 
 /* Section Headers */
-h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
+h2{font-family:var(--font-heading);font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
 h2 i{color:var(--accent);font-size:24px}
 h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px}
 
 /* About */
-.about-name{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.about-name{font-family:var(--font-heading);font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
 .about-name span{color:var(--text)}
 .about-subtitle{font-size:16px;color:var(--text-dim);margin-bottom:24px;font-weight:500}
 .about-bio{font-size:17px;color:var(--text-dim);line-height:1.8;margin-bottom:32px;max-width:100%}
@@ -70,7 +74,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .exp-card:hover{border-color:var(--accent);transform:translateX(4px)}
 .exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:12px 0 0 12px;background:var(--section-line)}
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.exp-title{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;font-weight:700}
+.exp-title{font-family:var(--font-heading);font-size:20px;font-weight:700}
 .exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
 .exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
 .exp-card ul{margin:0;padding-left:20px}
@@ -80,7 +84,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 
 /* Education */
 .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:16px;box-shadow:var(--card-shadow)}
-.edu-school{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;font-weight:700}
+.edu-school{font-family:var(--font-heading);font-size:20px;font-weight:700}
 .edu-degree{font-size:14px;color:var(--accent);font-weight:600;margin:4px 0}
 .edu-gpa{font-size:13px;color:var(--text-dim)}
 
@@ -404,18 +408,18 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 <div class="section-inner">
   <h2><i class="fas fa-trophy"></i> Certifications</h2>
   <ul class="award-list">
-    <li><i class="fas fa-trophy"></i>AWS Certified Security — Specialty</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified AI Practitioner</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified DevOps Engineer — Professional</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified Solutions Architect — Professional</li>
-    <li><i class="fas fa-trophy"></i>HashiCorp Certified Terraform Associate</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified Developer — Associate</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified SysOps Administrator — Associate</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified Solutions Architect — Associate</li>
-    <li><i class="fas fa-trophy"></i>AWS Certified Cloud Practitioner</li>
-    <li><i class="fas fa-trophy"></i>Microsoft Certified Azure Fundamentals</li>
-    <li><i class="fas fa-trophy"></i>Elastic Block Store (EBS) Subject Matter Expert</li>
-    <li><i class="fas fa-trophy"></i>Cisco Certified Network Associate (Retired)</li>
+    <li>🏆 AWS Certified Security — Specialty</li>
+    <li>🏆 AWS Certified AI Practitioner</li>
+    <li>🏆 AWS Certified DevOps Engineer — Professional</li>
+    <li>🏆 AWS Certified Solutions Architect — Professional</li>
+    <li>🏆 HashiCorp Certified Terraform Associate</li>
+    <li>🏆 AWS Certified Developer — Associate</li>
+    <li>🏆 AWS Certified SysOps Administrator — Associate</li>
+    <li>🏆 AWS Certified Solutions Architect — Associate</li>
+    <li>🏆 AWS Certified Cloud Practitioner</li>
+    <li>🏆 Microsoft Certified Azure Fundamentals</li>
+    <li>🏆 Elastic Block Store (EBS) Subject Matter Expert</li>
+    <li>🏆 Cisco Certified Network Associate (Retired)</li>
   </ul>
 </div>
 </section>
@@ -425,10 +429,10 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 <div class="section-inner">
   <h2><i class="fas fa-medal"></i> Honors</h2>
   <ul class="award-list">
-    <li><i class="fas fa-star"></i>One of six recipients out of 140 graduate students to earn a full graduate research and teaching assistantship from RIT</li>
-    <li><i class="fas fa-star"></i>Maintained a 4.0 GPA throughout the master's program</li>
-    <li><i class="fas fa-star"></i>Selected among top 6 of 2,500 engineers to form elite AWS Countdown Premium team for mission-critical customer support</li>
-    <li><i class="fas fa-star"></i>Led AWS Control Tower immersion day workshops for 55+ customers across multiple industries, achieving perfect satisfaction scores and driving production interest</li>
+    <li>⭐ One of six recipients out of 140 graduate students to earn a full graduate research and teaching assistantship from RIT</li>
+    <li>⭐ Maintained a 4.0 GPA throughout the master's program</li>
+    <li>⭐ Selected among top 6 of 2,500 engineers to form elite AWS Countdown Premium team for mission-critical customer support</li>
+    <li>⭐ Led AWS Control Tower immersion day workshops for 55+ customers across multiple industries, achieving perfect satisfaction scores and driving production interest</li>
   </ul>
 </div>
 </section>
