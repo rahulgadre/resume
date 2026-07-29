@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rahul's Resume</title>
 <link rel="icon" href="assets/img/rg-initials.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/cal-sans@1.0.1/index.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
@@ -18,8 +14,8 @@
   --nav-bg:#1c1b22;--nav-text:#8a857e;--nav-active:#e8a838;
   --badge-bg:rgba(232,168,56,.1);--badge-text:#e8a838;
   --trophy:#e8a838;--section-line:linear-gradient(180deg,#e8a838,#c77d1a);
-  --font-heading:'Cal Sans',sans-serif;
-  --font-body:'Albert Sans',sans-serif;
+  --font-heading:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body:'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .light-theme{
   --bg:#faf8f5;--bg2:#ffffff;--surface:#ffffff;--surface2:#f0ece6;
@@ -29,7 +25,7 @@
   --badge-bg:rgba(184,122,26,.08);--badge-text:#9a6515;
   --trophy:#b87a1a;--section-line:linear-gradient(180deg,#b87a1a,#9a6515);
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent2)}
@@ -77,7 +73,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .exp-title{font-family:var(--font-heading);font-size:20px;font-weight:700}
 .exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
-.exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:13px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
 .exp-card ul{margin:0;padding-left:20px}
 .exp-card li{color:var(--text-dim);font-size:15px;margin-bottom:6px;line-height:1.7}
 .exp-tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
