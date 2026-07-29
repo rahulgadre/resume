@@ -7,7 +7,8 @@
 <link rel="icon" href="assets/img/rg-initials.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/cal-sans@1.0.1/index.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
@@ -17,7 +18,7 @@
   --nav-bg:#1c1b22;--nav-text:#8a857e;--nav-active:#e8a838;
   --badge-bg:rgba(232,168,56,.1);--badge-text:#e8a838;
   --trophy:#e8a838;--section-line:linear-gradient(180deg,#e8a838,#c77d1a);
-  --font-heading:'Fraunces',serif;
+  --font-heading:'Cal Sans',sans-serif;
   --font-body:'Albert Sans',sans-serif;
 }
 .light-theme{
@@ -56,12 +57,12 @@ section:last-child{border-bottom:none}
 .section-inner{width:100%;max-width:1000px}
 
 /* Section Headers */
-h2{font-family:var(--font-heading);font-size:28px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
+h2{font-family:var(--font-heading);font-size:26px;font-weight:800;margin-bottom:40px;display:flex;align-items:center;gap:12px}
 h2 i{color:var(--accent);font-size:24px}
 h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px}
 
 /* About */
-.about-name{font-family:var(--font-heading);font-size:52px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.about-name{font-family:var(--font-heading);font-size:48px;font-weight:900;line-height:1.1;margin-bottom:8px}
 .about-name span{color:var(--text)}
 .about-subtitle{font-size:16px;color:var(--text-dim);margin-bottom:24px;font-weight:500}
 .about-bio{font-size:17px;color:var(--text-dim);line-height:1.8;margin-bottom:32px;max-width:100%}
@@ -76,11 +77,11 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .exp-title{font-family:var(--font-heading);font-size:20px;font-weight:700}
 .exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
-.exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:13px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
 .exp-card ul{margin:0;padding-left:20px}
-.exp-card li{color:var(--text-dim);font-size:14px;margin-bottom:6px;line-height:1.7}
+.exp-card li{color:var(--text-dim);font-size:15px;margin-bottom:6px;line-height:1.7}
 .exp-tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-.tech-badge{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;padding:3px 10px;border-radius:6px;background:var(--badge-bg);color:var(--badge-text);font-weight:500}
+.tech-badge{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;padding:3px 10px;border-radius:6px;background:var(--badge-bg);color:var(--badge-text);font-weight:500}
 
 /* Education */
 .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:16px;box-shadow:var(--card-shadow)}
@@ -453,7 +454,13 @@ const sections=document.querySelectorAll('section');
 const navLinks=document.querySelectorAll('nav a');
 window.addEventListener('scroll',()=>{
   let current='';
-  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)current=s.id});
+  const pageBottom=window.scrollY+window.innerHeight;
+  const docHeight=document.documentElement.scrollHeight;
+  if(pageBottom>=docHeight-50){
+    current=sections[sections.length-1].id;
+  }else{
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)current=s.id});
+  }
   navLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
 });
 </script>
