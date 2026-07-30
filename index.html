@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rahul's Resume</title>
 <link rel="icon" href="assets/img/rg-initials.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
@@ -14,8 +17,8 @@
   --nav-bg:#1c1b22;--nav-text:#8a857e;--nav-active:#e8a838;
   --badge-bg:rgba(232,168,56,.1);--badge-text:#e8a838;
   --trophy:#e8a838;--section-line:linear-gradient(180deg,#e8a838,#c77d1a);
-  --font-heading:'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-heading:'Source Serif 4', 'Georgia', serif;
+  --font-body:'Source Serif 4', 'Georgia', serif;
 }
 .light-theme{
   --bg:#faf8f5;--bg2:#ffffff;--surface:#ffffff;--surface2:#f0ece6;
@@ -25,8 +28,8 @@
   --badge-bg:rgba(184,122,26,.08);--badge-text:#9a6515;
   --trophy:#b87a1a;--section-line:linear-gradient(180deg,#b87a1a,#9a6515);
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Source Serif 4', 'Georgia', serif}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;font-size:17px;transition:background .3s,color .3s}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent2)}
 
@@ -75,7 +78,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .exp-company{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:4px}
 .exp-date{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;color:var(--text-dim);background:var(--surface2);padding:4px 12px;border-radius:20px;white-space:nowrap}
 .exp-card ul{margin:0;padding-left:20px}
-.exp-card li{color:var(--text-dim);font-size:15px;margin-bottom:6px;line-height:1.7}
+.exp-card li{color:var(--text-dim);font-size:16px;margin-bottom:6px;line-height:1.7}
 .exp-tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
 .tech-badge{font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;padding:3px 10px;border-radius:6px;background:var(--badge-bg);color:var(--badge-text);font-weight:500}
 
@@ -90,15 +93,15 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
 .skill-icons i{font-size:36px;color:var(--text-dim);transition:color .2s}
 .skill-icons i:hover{color:var(--accent)}
 .skill-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
-.skill-list li{font-size:14px;color:var(--text-dim);display:flex;align-items:center;gap:10px}
+.skill-list li{font-size:16px;color:var(--text-dim);display:flex;align-items:center;gap:10px}
 .skill-list li::before{content:'✓';color:var(--accent);font-weight:700;font-size:14px}
 
 /* Interests */
-.interests p{font-size:16px;color:var(--text-dim);line-height:1.8;margin-bottom:12px}
+.interests p{font-size:17px;color:var(--text-dim);line-height:1.8;margin-bottom:12px}
 
 /* Awards */
 .award-list{list-style:none}
-.award-list li{font-size:14px;color:var(--text-dim);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px}
+.award-list li{font-size:16px;color:var(--text-dim);padding:10px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px}
 .award-list li:last-child{border-bottom:none}
 .award-list i{color:var(--trophy);margin-top:3px;flex-shrink:0}
 
