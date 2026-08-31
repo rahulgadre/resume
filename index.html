@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rahul's Resume</title>
 <link rel="icon" href="assets/img/rg-initials.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 <style>
 :root{
@@ -17,8 +14,8 @@
   --nav-bg:#1c1b22;--nav-text:#8a857e;--nav-active:#e8a838;
   --badge-bg:rgba(232,168,56,.1);--badge-text:#e8a838;
   --trophy:#e8a838;--section-line:linear-gradient(180deg,#e8a838,#c77d1a);
-  --font-heading:'Source Serif 4', 'Georgia', serif;
-  --font-body:'Source Serif 4', 'Georgia', serif;
+  --font-heading:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;
 }
 .light-theme{
   --bg:#faf8f5;--bg2:#ffffff;--surface:#ffffff;--surface2:#f0ece6;
@@ -28,7 +25,7 @@
   --badge-bg:rgba(184,122,26,.08);--badge-text:#9a6515;
   --trophy:#b87a1a;--section-line:linear-gradient(180deg,#b87a1a,#9a6515);
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Source Serif 4', 'Georgia', serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:var(--font-body)}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;font-size:17px;transition:background .3s,color .3s}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent2)}
@@ -369,7 +366,7 @@ h2::after{content:'';flex:1;height:2px;background:var(--border);margin-left:16px
   <h2><i class="far fa-smile"></i> Interests</h2>
   <div class="interests">
     <p>I am a multi-cloud engineer passionate about designing and deploying infrastructure using AWS, Azure, Ansible, Docker, VMware, and Terraform.</p>
-    <p>In my free time, I enjoy hiking and taking long walks in the mountains. I also like playing sports, including soccer, badminton, and pickleball.</p>
+    <p>In my free time, I enjoy hiking and taking long walks in the mountains. I also like playing sports, including soccer, badminton, and cricket.</p>
   </div>
 </div>
 </section>
